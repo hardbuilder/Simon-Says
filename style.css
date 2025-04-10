@@ -1,0 +1,60 @@
+*{
+    font-family: "Special Gothic Expanded One";
+    background-color: rgb(239, 225, 207);
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+h3,h2{
+    z-index: 4;
+}
+.box_container{
+    height: 400px;
+    width: 400px;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+    align-content: center;
+}
+.btn{
+    border: 3px solid black;
+    border-radius: 1.5rem;
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+    margin-right: 20px;
+    z-index: 5;
+}
+#circle{
+    height: 100vh;
+    width: 100vh;
+    position: fixed;
+    top: -500px;
+    left: 0;
+    background-color: rgba(240, 248, 255, 0.508);
+    border-radius: 50%;
+}
+.red{
+    background-color: rgb(241, 100, 100);
+}
+.yello{
+    background-color: rgb(234, 234, 113);
+}
+.green{
+    background-color: rgb(113, 237, 113);
+}
+.blue{
+    background-color: rgb(112, 112, 234);
+}
+.flash{
+     background-color: rgb(65, 8, 8);
+}
+.reset{
+    padding: 10px;
+    border-radius: 1rem;
+    background-color: rgb(98, 47, 47);
+    color: white;
+}
