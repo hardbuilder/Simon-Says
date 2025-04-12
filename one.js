@@ -3,7 +3,7 @@ let userseq=[];
 let btns =["red","green","blue","yello"];
 let started = false;
 let level = 0;
-let h3 = document.querySelector("h3");
+let h2 = document.querySelector("h2");
 document.addEventListener("keypress", function(){
     if(started == false){
         started = true;
@@ -30,7 +30,7 @@ function flash(btn){
 }
 function levelup(){
     level++;
-    h3.innerText = "Level : " + level;
+    h2.innerText = "Level : " + level;
     let randIndex = Math.floor(Math.random()*4);
     let randColor = btns[randIndex];
     let randbtn = document.querySelector('.'+randColor);
@@ -45,10 +45,10 @@ function checkans(idx){
         }
     }
     else{
-        h3.innerText="Wrong button mate!! Game Over! press enter!"
-        document.querySelector(".box_container").style.backgroundColor="red";
+        h2.innerText="Wrong button mate!! Game Over! press start!"
+        document.querySelector(".game").style.backgroundColor="red";
         setTimeout(function(){
-            document.querySelector(".box_container").style.backgroundColor="";
+            document.querySelector(".game").style.backgroundColor="rgb(187, 194, 226)";
         },200);
         reset();
     }
