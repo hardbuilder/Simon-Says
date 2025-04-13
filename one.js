@@ -3,7 +3,8 @@ let userseq=[];
 let btns =["red","green","blue","yello"];
 let started = false;
 let level = 0;
-let h2 = document.querySelector("h2");
+let h2 = document.querySelector(".txt");
+let hs = document.querySelector(".highscore");
 document.addEventListener("keypress", function(){
     if(started == false){
         started = true;
@@ -11,6 +12,7 @@ document.addEventListener("keypress", function(){
         levelup();
     }
 });
+let hl = 0;
 const r = document.querySelector("button");
 r.addEventListener("click", function(){
     if(started == false){
@@ -46,6 +48,10 @@ function checkans(idx){
     }
     else{
         h2.innerText="Wrong button mate!! Game Over! press start!"
+        if(level > hl){
+            hl = level;
+            hs.innerText = "Your best : " + hl;
+        }
         document.querySelector(".game").style.backgroundColor="red";
         setTimeout(function(){
             document.querySelector(".game").style.backgroundColor="rgb(187, 194, 226)";
